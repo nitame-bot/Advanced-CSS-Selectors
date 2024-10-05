@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors with Pseudo Classes and Elements</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-left: 5px solid #3498db;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: -50px;
+            top: 10px;
+        }
+
+        
+        ul li:hover {
+            background-color: #e0f7fa;
+            cursor: pointer;
+        }
+
+        
+        ul li:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+
+        
+        p::first-letter {
+            font-size: 2rem;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Advanced CSS Selectors</h1>
+        <p>This paragraph demonstrates the use of the <strong>::first-letter</strong> pseudo-element.</p>
+
+        <h2>List with Content Images</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+
+        <h2>Input Field with Focus Effect</h2>
+        <input type="text" placeholder="Focus me!">
+    </div>
+
+</body>
+</html>
